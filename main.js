@@ -27,41 +27,67 @@ replaceAllButton.addEventListener('click', function () {
     console.log(find)
     let replace = replaceInput.value
     console.log(replace)
+    // Write a loop which loops over the rowElements array (which is already
+    // provided in the starter code).
+    for (let rowIndex = 0; rowIndex < rowElements.length; rowIndex += 1) {
+        const currentRow = rowElements[rowIndex];
+        console.log(currentRow)
+        // Inside this loop, use the getCellElements() function (already provided in the starter
+        // code) and assign the resulting array of cell elements to a variable.
+        let cellElements = getCellElements(currentRow)
+        // Write a nested loop which loops over the array of cell elements.
+        for (counter = 1; counter < 4; counter++)
+            console.log("Count from 1 to 3");
+        for (counterTwo = 1; counterTwo < 4; counterTwo++)
+            console.log(counterTwo);
+        // For each cell element, check if a cell contains the user-provided search
+        // string. Use the string method includes().
+        let string = "cell-elements";
+        let check = string.includes(".cell");
 
-})
-
-let numbers = [10, 20, 30, 40, 50];
-for (let index = 0; index < numbers.length; index++) {
-    console.log(numbers[index]);
-    index = 0;
-    array = [1, 2, 3, 4, 5, 6];
-    while (index < array.length) {
-        console.log(array[index]);
-        index++;
+        //If a cell does contain the user-provided search string, use innerHTML and the string
+        // method replace() to replace the user-provided search string with the user-provided
+        // replacement string. 
+        function getCellElements()
+        string = newFunction(string)
+        let result = string.replace(/Alice/, "Jane");
+        document.getCellElements("user-replacement").innerHTML = result;
     }
+
+    //function newFunction(string) {
+    // let(string = document.getCellElements("user-search")).innerHTML
+    // return string
+    // }
+
+
+
+    // Calling replace() function 
+    //let newstring = string.replace(); 
+
+
+    //document.write(newstring); 
+
+
 }
-function cellFunc(x) {
-    let cell = document.getElementById(x).rows[0].cells;
-    document.write(cell[0].innerHTML);
-}
 
-let string = "Griffin";
-let n = str.includes("McClain");
-string.includes(searchvalue, start)
+)
 
 
-const content = getCellElement.innerHTML;
-getCellElement.innerHTML = htmlString;
-// One last thing: dedicate very careful attention to using variables and
-// naming them accurately.
-// And when you change the value you are assigning to a variable, don't
-// forget to consider changing the name to reflect the change you made! It
-// is very easy to get confused when you are working inside NESTED LOOPS.
-// The best of us do. And unnecessary confusion during the process of 
-// developing your code means wasted time.
-//
-// The time-cost of structuring and naming things well is FAR less than the
-// time-cost of ignoring the quality and readability of your code.
-//
-// You can, of course, remove any comments in this starter project once
-// you have read them, if you prefer.
+
+
+
+
+
+    // One last thing: dedicate very careful attention to using variables and
+    // naming them accurately.
+    // And when you change the value you are assigning to a variable, don't
+    // forget to consider changing the name to reflect the change you made! It
+    // is very easy to get confused when you are working inside NESTED LOOPS.
+    // The best of us do. And unnecessary confusion during the process of 
+    // developing your code means wasted time.
+    //
+    // The time-cost of structuring and naming things well is FAR less than the
+    // time-cost of ignoring the quality and readability of your code.
+    //
+    // You can, of course, remove any comments in this starter project once
+    // you have read them, if you prefer.
