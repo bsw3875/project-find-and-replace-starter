@@ -29,48 +29,48 @@ replaceAllButton.addEventListener('click', function () {
     console.log(replace)
     // Write a loop which loops over the rowElements array (which is already
     // provided in the starter code).
-    for (let rowIndex = 0; rowIndex < rowElements.length; rowIndex += 1) {
-        const currentRow = rowElements[rowIndex];
-        console.log(currentRow)
-        // Inside this loop, use the getCellElements() function (already provided in the starter
-        // code) and assign the resulting array of cell elements to a variable.
-        let cellElements = getCellElements(currentRow)
-        // Write a nested loop which loops over the array of cell elements.
-        for (counter = 1; counter < 4; counter++)
-            console.log("Count from 1 to 3");
-        for (counterTwo = 1; counterTwo < 4; counterTwo++)
-            console.log(counterTwo);
-        // For each cell element, check if a cell contains the user-provided search
-        // string. Use the string method includes().
-        let string = "cell-elements";
-        let check = string.includes(".cell");
+    for (let rowIndex = 0; rowIndex < rowElements.length; rowIndex += 1)
+        currentRow = rowElements[rowIndex];
+    console.log(currentRow)
 
-        //If a cell does contain the user-provided search string, use innerHTML and the string
-        // method replace() to replace the user-provided search string with the user-provided
-        // replacement string. 
-        function getCellElements()
-        string = newFunction(string)
-        let result = string.replace(/Alice/, "Jane");
-        document.getCellElements("user-replacement").innerHTML = result;
+    // Inside this loop, use the getCellElements() function (already provided in the starter
+    // code) and assign the resulting array of cell elements to a variable.
+    let cellElements = getCellElements(currentRow)
+
+    // Write a nested loop which loops over the array of cell elements.
+
+
+    for (index = 0; index < rowElements.length; index++) {
+        if (rowElements[index] <= 0)
+            document.write(rowElements[index] = ", "[index])
+
     }
 
-    //function newFunction(string) {
-    // let(string = document.getCellElements("user-search")).innerHTML
-    // return string
-    // }
+    // For each cell element, check if a cell contains the user-provided search
+    // string. Use the string method includes().
+    let string = "Alice W. Stone gets mail at P.O. Box 157.";
+    let n = string.includes("Stone");
+
+
+    //If a cell does contain the user-provided search string, use innerHTML and the string
+    // method replace() to replace the user-provided search string with the user-provided
+    // replacement string. 
+console.log(searchString)
+    function searchString() {
+        let string = document.getElementById("search-string").innerHTML;
+        let result = string.replace(Alice, function myFunction(a) {
+            return a.toUpperCase();
+        });
+        document.getElementById("search-string").innerHTML = result;
+    }
+})
 
 
 
-    // Calling replace() function 
-    //let newstring = string.replace(); 
+    //In all your loops, avoid using low-meaning index variables like "i" and "j". 
 
 
-    //document.write(newstring); 
 
-
-}
-
-)
 
 
 
