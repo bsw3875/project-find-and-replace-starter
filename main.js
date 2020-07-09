@@ -40,44 +40,41 @@ replaceAllButton.addEventListener('click', function () {
     // Write a nested loop which loops over the array of cell elements.
 
 
-    for (index = 0; index < rowElements.length; index++) {
-        if (rowElements[index] <= 0)
-            document.write(rowElements[index] = ", "[index])
+    for (index = 0; index < cellElements.length; index++) {
+        if (cellElements[index] <= 0)
+            document.write(cellElements[index] = ", "[index])
 
     }
 
     // For each cell element, check if a cell contains the user-provided search
     // string. Use the string method includes().
-    let string = "Alice W. Stone gets mail at P.O. Box 157.";
-    let n = string.includes("Stone");
+    const string = " Jane is from Gibraltar .";
+    let names = ["Jane", "Alice", "Donna"];
+    console.log(names.includes("Jane")); // true
+    console.log(names.includes("Donna")); // false
+
+    // let string = "Alice W. Stone gets mail at P.O. Box 157.";
+    //let n = string.includes("Stone");
 
 
     //If a cell does contain the user-provided search string, use innerHTML and the string
     // method replace() to replace the user-provided search string with the user-provided
     // replacement string. 
-console.log(searchString)
-    function searchString() {
-        let string = document.getElementById("search-string").innerHTML;
-        let result = string.replace(Alice, function myFunction(a) {
-            return a.toUpperCase();
-        });
-        document.getElementById("search-string").innerHTML = result;
-    }
+
+    let newString = " Donna is from Bahrain .";
+    //let newstring = string.replace(/Donna/, 'Bahrain');
+    document.documentElement.innerHTML = "<pre>" +
+        document.documentElement.innerHTML.replace(/Donna/, "Bahrain;") +
+        "</pre>";
+
+    console.log(newString);
+
+    //citation:referenced code in MDN we docs in string.prototype, methods include and relace
+
+
 })
 
-
-
     //In all your loops, avoid using low-meaning index variables like "i" and "j". 
-
-
-
-
-
-
-
-
-
-
     // One last thing: dedicate very careful attention to using variables and
     // naming them accurately.
     // And when you change the value you are assigning to a variable, don't
