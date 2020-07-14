@@ -33,13 +33,11 @@ replaceAllButton.addEventListener('click', function () {
         currentRow = rowElements[rowIndex];
     console.log(currentRow)
 
-  // Inside this loop, use the getCellElements() function (already provided in the starter
+    // Inside this loop, use the getCellElements() function (already provided in the starter
     // code) and assign the resulting array of cell elements to a variable.
     let cellElements = getCellElements(currentRow)
 
     // Write a nested loop which loops over the array of cell elements.
-
-
     for (index = 0; index < cellElements.length; index++) {
         if (cellElements[index] <= 0)
             document.write(cellElements[index] = ", "[index])
@@ -50,9 +48,9 @@ replaceAllButton.addEventListener('click', function () {
     // string. Use the string method includes().
     const string = " Jane is from Gibraltar .";
 
-    let names = ["Jane", "Alice", "Donna"];
-    console.log(names.includes("Jane")); // true
-    console.log(names.includes("Donna")); // false
+    //let names = ["Jane", "Alice", "Donna"];
+    console.log(string.includes("Jane")); // true
+    console.log(string.includes("Donna")); // false
 
     // let string = "Alice W. Stone gets mail at P.O. Box 157.";
     //let n = string.includes("Stone");
@@ -63,17 +61,17 @@ replaceAllButton.addEventListener('click', function () {
     // replacement string. 
 
     let newString = " Donna is from Bahrain .";
-    //let newstring = string.replace(/Donna/, 'Bahrain');
-    document.documentElement.innerHTML = "<pre>" +
-        document.documentElement.innerHTML.replace(/Donna/, "Bahrain;") +
-        "</pre>";
+    if (newString.indexOf("Donna") !== -1) {
+        document.documentElement.innerHTML = "<pre>" +
+            document.documentElement.innerHTML.replace(/Donna/, "Bahrain;") +
+            "</pre>";
 
-    console.log(newString);
+        console.log(newString);
 
-    //citation:referenced code in MDN we docs in string.prototype, methods include and relace
+        //citation:referenced code in MDN we docs in string.prototype, methods include and relace
 
 
-})
+    }
 
     //In all your loops, avoid using low-meaning index variables like "i" and "j". 
     // One last thing: dedicate very careful attention to using variables and
@@ -89,3 +87,4 @@ replaceAllButton.addEventListener('click', function () {
     //
     // You can, of course, remove any comments in this starter project once
     // you have read them, if you prefer.
+})
