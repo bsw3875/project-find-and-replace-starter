@@ -33,7 +33,7 @@ replaceAllButton.addEventListener('click', function () {
         currentRow = rowElements[rowIndex];
     console.log(currentRow)
 
-    // Inside this loop, use the getCellElements() function (already provided in the starter
+  // Inside this loop, use the getCellElements() function (already provided in the starter
     // code) and assign the resulting array of cell elements to a variable.
     let cellElements = getCellElements(currentRow)
 
@@ -49,6 +49,7 @@ replaceAllButton.addEventListener('click', function () {
     // For each cell element, check if a cell contains the user-provided search
     // string. Use the string method includes().
     const string = " Jane is from Gibraltar .";
+
     let names = ["Jane", "Alice", "Donna"];
     console.log(names.includes("Jane")); // true
     console.log(names.includes("Donna")); // false
