@@ -35,43 +35,45 @@ replaceAllButton.addEventListener('click', function () {
 
     // Inside this loop, use the getCellElements() function (already provided in the starter
     // code) and assign the resulting array of cell elements to a variable.
-    let cellElements = getCellElements(currentRow)
+    let currentRowElement = getCellElements(currentRow)
 
     // Write a nested loop which loops over the array of cell elements.
-    for (index = 0; index < cellElements.length; index++) {
-        if (cellElements[index] <= 0)
-            document.write(cellElements[index] = ", "[index])
+    for (index = 0; index < currentRowElement.length; index++) {
+        if (currentRowElement[index] <= 0)
+            document.write([index])
 
     }
 
     // For each cell element, check if a cell contains the user-provided search
     // string. Use the string method includes().
-    const string = " Jane is from Gibraltar .";
+function string() {
+    let string = "Donna is from Bahrain.";
+    let check = string.includes("Bahrain");
+    document.getElementById("Donna").innerHTML = check;
 
-    //let names = ["Jane", "Alice", "Donna"];
-    console.log(string.includes("Jane")); // true
-    console.log(string.includes("Donna")); // false
+}
 
-    // let string = "Alice W. Stone gets mail at P.O. Box 157.";
-    //let n = string.includes("Stone");
-
+    //citation: refer from geek for geeks
 
     //If a cell does contain the user-provided search string, use innerHTML and the string
     // method replace() to replace the user-provided search string with the user-provided
     // replacement string. 
+let stringReplace = function() 
+        {let myString = "Donna is from Bahrain ";
+        let newString = myString.replace(/_/g, "-");
+        document.getElementById("Bahrain").innerHTML = newString;
+    
 
-    let newString = " Donna is from Bahrain .";
-    if (newString.indexOf("Donna") !== -1) {
-        document.documentElement.innerHTML = "<pre>" +
-            document.documentElement.innerHTML.replace(/Donna/, "Bahrain;") +
-            "</pre>";
+        
+//citation: refer from tutorialrepublic
+    //  let newString = " Donna's last name is Barron.";
+    //  if (newString.innerText("last-name") !== -1) {
+    //    document.documentElement.innerHTML = "<bre>" +
+    // +currentCell = 
+    //         "</bre>";
 
-        console.log(newString);
+    //     console.log(newString);
 
-        //citation:referenced code in MDN we docs in string.prototype, methods include and relace
-
-
-    }
 
     //In all your loops, avoid using low-meaning index variables like "i" and "j". 
     // One last thing: dedicate very careful attention to using variables and
@@ -87,4 +89,10 @@ replaceAllButton.addEventListener('click', function () {
     //
     // You can, of course, remove any comments in this starter project once
     // you have read them, if you prefer.
-})
+
+
+
+
+
+        }
+    })
