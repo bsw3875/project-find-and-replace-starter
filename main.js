@@ -29,43 +29,41 @@ replaceAllButton.addEventListener('click', function () {
     console.log(replace)
     // Write a loop which loops over the rowElements array (which is already
     // provided in the starter code).
-    for (let rowIndex = 0; rowIndex < rowElements.length; rowIndex += 1)
+    for (let rowIndex = 0; rowIndex < rowElements.length; rowIndex += 1) {
         currentRow = rowElements[rowIndex];
-    console.log(currentRow)
+        console.log(currentRow)
 
-    // Inside this loop, use the getCellElements() function (already provided in the starter
-    // code) and assign the resulting array of cell elements to a variable.
-    let currentRowElement = getCellElements(currentRow)
-
-    // Write a nested loop which loops over the array of cell elements.
-    for (index = 0; index < currentRowElement.length; index++) {
-        if (currentRowElement[index] <= 0)
-            document.write([index])
-
+        // Inside this loop, use the getCellElements() function (already provided in the starter
+        // code) and assign the resulting array of cell elements to a variable.
+        let cellElements = getCellElements(currentRow)
+        console.log(cellElements)
+        // Write a nested loop which loops over the array of cell elements.
+        for (index = 0; index < cellElements.length; index++) {
+            let cellElement = cellElements[index]
+            console.log(cellElement.innerText)
+            let cellString = cellElement.innerText
+            if (cellString.includes(find)) {
+                cellString = cellString.replace(find, replace)
+                cellElement.innerText = cellString
+            }
+        }
     }
-
     // For each cell element, check if a cell contains the user-provided search
     // string. Use the string method includes().
-function string() {
-    let string = "Donna is from Bahrain.";
-    let check = string.includes("Bahrain");
-    document.getElementById("Donna").innerHTML = check;
 
-}
+
+
 
     //citation: refer from geek for geeks
 
     //If a cell does contain the user-provided search string, use innerHTML and the string
     // method replace() to replace the user-provided search string with the user-provided
     // replacement string. 
-let stringReplace = function() 
-        {let myString = "Donna is from Bahrain ";
-        let newString = myString.replace(/_/g, "-");
-        document.getElementById("Bahrain").innerHTML = newString;
-    
 
-        
-//citation: refer from tutorialrepublic
+
+
+
+    //citation: refer from tutorialrepublic
     //  let newString = " Donna's last name is Barron.";
     //  if (newString.innerText("last-name") !== -1) {
     //    document.documentElement.innerHTML = "<bre>" +
@@ -94,5 +92,5 @@ let stringReplace = function()
 
 
 
-        }
-    })
+}
+)
